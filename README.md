@@ -1,0 +1,2 @@
+# MaiBot_repeat_plugin
+修改了内置reply_plugin，新增了让麦麦可以复读的方法
