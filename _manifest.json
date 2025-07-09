@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "name": "麦麦复读插件（在内置reply插件基础上更改）",
   "version": "1.0.0",
-  "description": "在内置的reply插件中新增了判断是否有重复消息、是否参与复读的方法。",
+  "description": "在内置的reply插件中新增了判断是否有重复消息、是否参与复读的方法。覆盖前请先备份！！",
   "author": {
     "name": "Original by MaiBot团队，modified by 火火火木",
     "url": "https://github.com/SkillfulPainter"
