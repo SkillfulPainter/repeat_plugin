@@ -1,0 +1,44 @@
+{
+  "manifest_version": 1,
+  "name": "麦麦复读插件（在内置reply插件基础上更改）",
+  "version": "1.0.0",
+  "description": "在内置的reply插件中新增了判断是否有重复消息、是否参与复读的方法。",
+  "author": {
+    "name": "Original by MaiBot团队，modified by 火火火木",
+    "url": "https://github.com/SkillfulPainter"
+  },
+  "license": "GPL-v3.0-or-later",
+  
+  "host_application": {
+    "min_version": "0.8.0",
+  },
+  "homepage_url": "https://github.com/SkillfulPainter",
+  "repository_url": "https://github.com/SkillfulPainter/repeat_plugin",
+  "keywords": ["core", "chat", "reply", "emoji", "action", "built-in", "repeat"],
+  "categories": ["Core System", "Chat Management"],
+  
+  "default_locale": "zh-CN",
+  "locales_path": "_locales",
+  
+  "plugin_info": {
+    "is_built_in": true,
+    "plugin_type": "action_provider",
+    "components": [
+      {
+        "type": "action",
+        "name": "reply",
+        "description": "参与聊天回复，发送文本进行表达（新增复读判断）"
+      },
+      {
+        "type": "action", 
+        "name": "no_reply",
+        "description": "暂时不回复消息，等待新消息或超时"
+      },
+      {
+        "type": "action",
+        "name": "emoji", 
+        "description": "发送表情包辅助表达情绪"
+      }
+    ]
+  }
+}
