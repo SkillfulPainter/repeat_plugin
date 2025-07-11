@@ -16,15 +16,15 @@
 将这个plugin中的plugin.py文件复制到 **"MaiBot\src\plugins\built_in\core_actions"** 目录下并覆盖其中的 **plugin.py** 文件。然后删除该目录里的config.toml让麦麦在运行时生成新的配置文件。
 对于更新的版本用户：
 仔细检查**"MaiBot\src\plugins\built_in\core_actions"** 目录下的 **plugin.py** 文件与0.8.0版本的是否一致，若一致则可直接覆盖，若不一致，可尝试在
-'''
+```python
 try:
         success, reply_set = await generator_api.generate_reply(
         action_data=self.action_data,
         chat_id=self.chat_id,
         )
-'''
+```
 前，execute(self)后加上如下判断：
-'''
+```python
         repeat_probability = self.get_config("repeat.repeat_probability", 0)
         enable_repeat = self.get_config("repeat.enable_repeat", False)
         repeatable = False
@@ -81,18 +81,18 @@ try:
                     action_data=self.action_data,
                     chat_id=self.chat_id,
                 )
-'''
+```
 然后在插件末尾的
-'''
+```python
 class CoreActionsPlugin(BasePlugin):
-'''
+```
 的config_schema中加入如下配置：
-'''
+```python
 "repeat": {
             "enable_repeat": ConfigField(type=bool, default=False, description="是否启用复读功能"),
             "repeat_probability": ConfigField(type=float, default=0.5, description="bot的复读几率", example=0.5),
         },
-'''
+```
 
 # <span style="color:red">⚠️ 覆盖前一定要备份原文件！</span> ⚠️
 # <span style="color:red">⚠️ 覆盖前一定要备份原文件！</span> ⚠️
