@@ -14,6 +14,7 @@
 # <span style="color:red">⚠️ ！！必读！！</span> ⚠️
 对于0.8.0版本用户：
 将这个plugin中的plugin.py文件复制到 **"MaiBot\src\plugins\built_in\core_actions"** 目录下并覆盖其中的 **plugin.py** 文件。然后删除该目录里的config.toml让麦麦在运行时生成新的配置文件。
+
 对于更新的版本用户：
 仔细检查**"MaiBot\src\plugins\built_in\core_actions"** 目录下的 **plugin.py** 文件与0.8.0版本的是否一致，若一致则可直接覆盖，若不一致，可尝试在
 ```python
